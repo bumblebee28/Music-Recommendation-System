@@ -95,7 +95,7 @@ if st.button('Show Recommendation'):
         
         
     one_hot_encoder = OneHotEncoder()
-    artist_encoded = one_hot_encoder.fit_transform(df[['Artist']])
+    artist_encoded = one_hot_encoder.fit_transform(df[['Artist']]).toarray()
 
     # Combine numerical features and artist encoded features
     df_combined = np.hstack((df_numerical, artist_encoded))
