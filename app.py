@@ -94,7 +94,7 @@ if st.button('Show Recommendation'):
         st.image(recommended_music_posters[4])
         
         
-    one_hot_encoder = OneHotEncoder(sparse=False)
+    one_hot_encoder = OneHotEncoder()
     artist_encoded = one_hot_encoder.fit_transform(df[['Artist']])
 
     # Combine numerical features and artist encoded features
